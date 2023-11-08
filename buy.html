@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Tamga</title>
+    <link rel = "stylesheet" href = "main.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="images/logo.jpg" alt="Логотип">
+    </div>
+
+    <div class="social-links">
+            <a href="https://web.telegram.org/" target = blank><img src="images/telegram-icon.png" alt="Telegram"></a>
+
+        </div>
+
+  <a href="https://yandex.ru/maps/org/aviapark/1200353900/" target = self> Адреса наших магазинов </a>
+    <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="honey.html" >Наш мед</a></li>
+                <li><a href="price.html">Прайс</a></li>
+                <li><a href="buy.html" class="active" >Купить</a></li>
+            </ul>
+        </nav>
+
+
+
+<form action="https://www.google.com/search?" method="get" target="_blank">
+  <div>
+            <p>Ваше имя и фамилия <input name="name" type="text" value= "Имя Фамилия" ></p>
+        </div>
+        <div>
+            <p>
+               Введите количество:
+                 <input type="number" name="Kolichestvo" value="Количество">
+            </p>
+        </div>
+             <div>
+                 <p>Введите дату доставки:
+                <input type="date" name="dateData" value= "Дата доставки">
+                       </p>
+             </div>
+        <div>
+            <p> Введите пароль от личного кабинета
+            <Input type="password" name="passwordData" value="Пароль"></p>
+        </div>
+<div>
+        <p>Какой способ оплаты вам удобнее?</p>
+        <input type="radio" name="pay" id="pay1" value="Наличные" checked/>
+        <label for="pay1">Наличные</label><br>
+     <input type="radio" name="pay" id="pay2" value="Картой" />
+        <label for="pay2">Онлайн-оплата</label><br>
+        <input type="radio" name="pay" id="pay3" value="Другое" />
+        <label for="pay3" >Другое</label><br>
+        </div>
+
+    <div>
+            <p>Выберите товар</p>
+            <input type="checkbox" name="tovar" id="t1" value="Мед Липа">
+            <label for="t1">Липовый мед</label><br>
+          <input type="checkbox" name="tovar" id="t2" value="Мед Липа">
+            <label for="t2">< Бортевой мед</label><br>
+          <input type="checkbox" name="tovar" id="t3" value="Подарочный набор">
+            <label for="t3">< Подарочный набор </label><br>
+        <input type="checkbox" name="tovar" id="t4" value="Свечи">
+            <label for="t4">< Свечи из вощины </label><br>
+        </div>
+
+    <button>Оставить заявку на заказ</button>
+ <input  type="hidden" name="q" id="say" value="Спасибо за ваши данные" />
+
+
+
+</form>
+
+
+</header>
+</body>
+</html>
+

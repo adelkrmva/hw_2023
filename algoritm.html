@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение алгоритмической задачи</title>
+</head>
+<body>
+    <h1>Решение алгоритмической задачи 1001</h1>
+    <p>Дано: Имеется коробка со сторонами: A × B × C. <br> Определить: пройдёт ли она в дверь с размерами M × K.</p>
+
+    <p>Пройдёт ли коробка в дверь с размерами M × K?</p>
+
+    <form action="https://www.google.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+        <ul>
+            <li>для поисковика:<input name="q" value="search"></li>
+        </ul>
+        <h4>формулировка задачи <input name="formulation" value="Определить"></h4>
+
+        <h4> Ширина коробки <input id="a" name="a" type="number" value="10"> </h4>
+        <h4> Высота коробки <input id="b" name="b" type="number" value="10"> </h4>
+        <h4> Толщина коробки<input id="c" name="c" type="number" value="10"> </h4>
+        <h4> Ширина двери <input id="m" name="m" type="number" value="20"> </h4>
+        <h4> Высота двери<input id="k" name="k" type="number" value="20"> </h4>
+        <h4>результат решения: <input name="result" value="не определено"></h4>
+        <ul>
+            <li>действие 1: <input id="verify" type="button" value="Проверить"></li>
+            <li>действие 2: <input id="send" type="button" value="Отправить"></li>
+        </ul>
+    </form>
+    <p id="result">Результаты вычислений:  </p>
+</body>
+<script src="alg.js"></script>
+<script>
+    function verify() {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        let c = parseFloat(document.getElementById("c").value);
+        let m = parseFloat(document.getElementById("m").value);
+        let k = parseFloat(document.getElementById("k").value);
+
+        let result;
+        let messageText = document.getElementById("result").innerText;
+
+        if (a <= m && b <= k) {
+            result = " Коробка пройдет через дверь";
+            document.getElementById("result").innerText = messageText + result;
+            document.getElementsByName('result')[0].value = result;
+        } else {
+            result = " Коробка не пройдет через дверь";
+            document.getElementById("result").innerText = messageText + result;
+            document.getElementsByName('result')[0].value = result;
+        }
+    }
+
+    function send() {
+        let check = document.getElementsByName('result')[0].value === " Коробка пройдет через дверь";
+
+        if (check) {
+            let textCondition = document.getElementsByTagName('p')[0].innerText;
+            document.getElementsByName('formulation')[0].value = textCondition;
+            document.getElementsByName('result')[0].value = document.getElementById("result").innerText;
+            document.getElementById("UserEnter").submit();
+        } else {
+            alert("Повторите ввод");
+        }
+    }
+
+    function verify_send() {
+        verify();
+        send();
+    }
+
+    const elementA = document.getElementById("a");
+    elementA.addEventListener('input', verify);
+
+    const elementB = document.getElementById("b");
+    elementB.addEventListener('input', verify);
+
+    const elementC = document.getElementById("c");
+    elementC.addEventListener('input', verify);
+
+    const elementM = document.getElementById("m");
+    elementM.addEventListener('input', verify);
+
+    const elementK = document.getElementById("k");
+    elementK.addEventListener('input', verify);
+
+    const elementVerify = document.getElementById("verify");
+    elementVerify.addEventListener('click', verify);
+
+    const elementSend = document.getElementById("send");
+    elementSend.addEventListener('click', send);
+</script>
+</html>
+>
