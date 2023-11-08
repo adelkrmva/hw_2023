@@ -28,8 +28,10 @@
             <li>действие 2: <input id="send" type="button" value="Отправить"></li>
         </ul>
     </form>
+                                                                                                                             <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>
     <p id="result">Результаты вычислений:  </p>
 </body>
+
 <script src="alg.js"></script>
 <script>
     function verify() {
@@ -66,25 +68,22 @@
         }
     }
 
-    function verify_send() {
-        verify();
-        send();
-    }
+
 
     const elementA = document.getElementById("a");
-    elementA.addEventListener('input', verify);
+    elementA.addEventListener('keyup', verify);
 
     const elementB = document.getElementById("b");
-    elementB.addEventListener('input', verify);
+    elementB.addEventListener('keyup', verify);
 
     const elementC = document.getElementById("c");
-    elementC.addEventListener('input', verify);
+    elementC.addEventListener('keyup', verify);
 
     const elementM = document.getElementById("m");
-    elementM.addEventListener('input', verify);
+    elementM.addEventListener('keyup', verify);
 
     const elementK = document.getElementById("k");
-    elementK.addEventListener('input', verify);
+    elementK.addEventListener('keyup', verify);
 
     const elementVerify = document.getElementById("verify");
     elementVerify.addEventListener('click', verify);
